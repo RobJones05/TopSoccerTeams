@@ -27,12 +27,20 @@ class MainActivity : AppCompatActivity() {
         teams[0] = "Mamelodi Sundowns :)"
 
         //assigning array content to a variable
-        var teamsDisplay =""
-        teamsDisplay +="${teams[0]}\n"
-        teamsDisplay +="${teams[1]}\n"
-        teamsDisplay +="${teams[2]}\n"
-        teamsDisplay +="${teams[3]}\n"
-        teamsDisplay +="${teams[4]}\n"
+        var teamsDisplay = ""
+        var count = 0
+        while (count< teams.count()) {
+            teamsDisplay += "${teams[count]}\n"
+            count++
+        }
+
+
+
+//        teamsDisplay +="${teams[0]}\n"
+//        teamsDisplay +="${teams[1]}\n"
+//        teamsDisplay +="${teams[2]}\n"
+//        teamsDisplay +="${teams[3]}\n"
+//        teamsDisplay +="${teams[4]}\n"
 
 
         //displaying array content in the text view
