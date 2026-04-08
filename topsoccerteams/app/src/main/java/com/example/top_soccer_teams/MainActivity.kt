@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         //reassigned position 0 of teams array to a new value
         teams[0] = "Mamelodi Sundowns :)"
+
         //assigning array content to a variable
         var teamsDisplay =""
         teamsDisplay +="${teams[0]}\n"
@@ -33,6 +34,9 @@ class MainActivity : AppCompatActivity() {
         teamsDisplay +="${teams[3]}\n"
         teamsDisplay +="${teams[4]}\n"
 
+
+        //displaying array content in the text view
+        teamsTxt.text = teamsDisplay
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
