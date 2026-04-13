@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         //assigning array content to a variable
 
+        //for loop to loop all the display for teams to view
         var teamsDisplay = ""
         for (team in teams){
             teamsDisplay += "${team}\n"
