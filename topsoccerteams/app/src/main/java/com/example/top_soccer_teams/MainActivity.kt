@@ -27,12 +27,21 @@ class MainActivity : AppCompatActivity() {
         teams[0] = "Mamelodi Sundowns :)"
 
         //assigning array content to a variable
+
         var teamsDisplay = ""
-        var count = 0
-        while (count< teams.count()) {
-            teamsDisplay += "${teams[count]}\n"
-            count++
+        for (team in teams){
+            teamsDisplay += "${team}\n"
         }
+
+
+
+
+//        var teamsDisplay = ""
+//        var count = 0
+//        while (count< teams.count()) {
+//            teamsDisplay += "${teams[count]}\n"
+//            count++
+//        }
 
 
 
