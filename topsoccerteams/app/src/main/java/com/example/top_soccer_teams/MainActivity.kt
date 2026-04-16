@@ -8,6 +8,15 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import java.util.Arrays
 
+//logs the content of an array of strings
+fun logArrayValues(arr: Array<String>, limit: Int = 0){
+    if (limit == 0){
+        Log.v("Array Values", Arrays.toString(arr))
+    }else{
+        Log.v("Array Values, Arrays.toString"(
+            arr.sliceArray(0..limit - 1)))
+    }
+}
 class MainActivity : AppCompatActivity() {
 
     val teams = arrayOf<String>("Mamelodi Sundowns FC", "Orlando Pirates", "Bidvest Wits",
@@ -25,6 +34,9 @@ class MainActivity : AppCompatActivity() {
 
         //reassigned position 0 of teams array to a new value
         teams[0] = "Mamelodi Sundowns :)"
+
+        //calling function to display all values
+        logArrValues(teams)
 
         //assigning array content to a variable
 
