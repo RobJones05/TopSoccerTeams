@@ -7,6 +7,21 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import java.util.Arrays
+import android.util.Log
+
+//looks for the shortest entry in the string array
+fun getShorttestString(arr: Array<String>) : String{
+    var shortestLength = arr[0]
+
+    for(element in arr){
+        if (element.length < shortest.length){
+            shortestLength = element
+        }
+    }
+    return shortestLength
+}
+
+
 
 //logs the content of an array of strings
 fun logArrayValues(arr: Array<String>, limit: Int = 0){
@@ -32,11 +47,19 @@ class MainActivity : AppCompatActivity() {
 
         val teamsTxt = findViewById<TextView>(R.id.teamDisplayId)
 
+        val shortest = getShortestLength(teams)
+
         //reassigned position 0 of teams array to a new value
         teams[0] = "Mamelodi Sundowns :)"
 
         //calling function to display all values
         logArrValues(teams)
+
+        //calling fuction to display shortest string in array
+        Log.d("RESULT", "Shortest length is: $shortest")
+
+        //calling functions to display with a limit
+        logArrValues(teams, 4)
 
         //assigning array content to a variable
 
